@@ -34,6 +34,61 @@ Script Bash sederhana namun powerful untuk **Backup & Restore aplikasi Android**
 - Jika versi di HP **sama** → **SKIP**
 - Jika versi beda → otomatis backup versi terbaru
 
+🗂️ Lokasi Backup
+~/Documents/APK_REPOSITORY
+
+
+Format nama file:
+NamaPackage_vVersi.apk
+
+🚀 Cara Install
+🔹 Cara 1 — One-Liner (paling cepat)
+bash <(curl -sL https://bit.ly/adb-manager-v4)
+
+🔹 Cara 2 — Manual
+git clone https://github.com/username/adb-apk-manager.git
+cd adb-apk-manager
+chmod +x adb_manager.sh
+./adb_manager.sh
+
+🛠️ Prasyarat
+📦 ADB
+# macOS
+brew install android-platform-tools
+
+# Arch / CachyOS
+sudo pacman -S android-tools
+
+# Ubuntu / Debian
+sudo apt install adb
+
+
+Windows: install Android Platform Tools lalu tambahkan ke PATH.
+
+📱 Android Device
+
+Developer Options ON
+
+USB Debugging ON
+
+Gunakan kabel data yang bagus (lebih stabil)
+
+📸 Screenshots
+
+(tempatkan screenshot di sini)
+
+Menu Utama
+
+Backup Split APK
+
+⚠️ Disclaimer
+
+Script hanya membackup APK (installer).
+Data aplikasi (login, chat, save game, dll.) tidak ikut ter-backup (non-root).
+
+Gunakan dengan bijak — risiko ditanggung pengguna.
+
+Made with ☕ by AwPetrik
 ---
 
 ### 🖥️ Multi-Platform + WSL Bridge
@@ -43,57 +98,3 @@ Script Bash sederhana namun powerful untuk **Backup & Restore aplikasi Android**
 
 ---
 
-## 🗂️ Lokasi Backup
-```bash
-~/Documents/APK_REPOSITORY
-Format nama file:
-
-bash
-Salin kode
-NamaPackage_vVersi.apk
-🚀 Cara Install
-🔹 Cara 1 — One-Liner (paling cepat)
-bash
-Salin kode
-bash <(curl -sL https://bit.ly/adb-manager-v4)
-🔹 Cara 2 — Manual
-bash
-Salin kode
-git clone https://github.com/username/adb-apk-manager.git
-cd adb-apk-manager
-chmod +x adb_manager.sh
-./adb_manager.sh
-🛠️ Prasyarat
-ADB
-bash
-Salin kode
-# macOS
-brew install android-platform-tools
-
-# Arch / CachyOS
-sudo pacman -S android-tools
-
-# Ubuntu / Debian
-sudo apt install adb
-Windows: install Platform Tools + masukkan ke PATH.
-
-Android Device
-Developer Options ON
-
-USB Debugging ON
-
-Kabel data yang bagus (biar transfer stabil)
-
-📸 Screenshots
-(tempatkan screenshot di sini)
-
-Menu Utama
-
-Backup Split APK
-
-⚠️ Disclaimer
-Script hanya membackup APK (installer).
-Data aplikasi (login, chat, save game, dll.) tidak ikut ter-backup (non-root).
-Gunakan dengan bijak — risiko ditanggung pengguna.
-
-Made with ☕ by AwPetrik
