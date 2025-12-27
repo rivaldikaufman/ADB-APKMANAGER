@@ -49,7 +49,10 @@ NamaPackage_vVersi.apk
 
 ## 🚀 Cara Install
 ### 🔹 Cara 1 — One-Liner (paling cepat)
+#### 🐧 **Linux**
 ```curl -sSL bit.ly/adbapkmanager | bash```
+#### 🍎 **macOS**
+```bash <(curl -sSL bit.ly/adbapkmanager)```
 
 ### 🔹 Cara 2 — Manual
 ```bash
