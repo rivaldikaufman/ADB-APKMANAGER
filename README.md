@@ -1,123 +1,99 @@
-📱 ADB APK Manager — Ultimate Edition
+# 📱 ADB APK Manager — Ultimate Edition
 
-Tools wajib buat lo yang hobi gonta-ganti Custom ROM tapi males install ulang aplikasi satu-satu.
-Script Bash sederhana namun powerful untuk Backup & Restore aplikasi Android (termasuk Split APK / App Bundles) secara massal via ADB.
+![bash](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnubash&logoColor=white)
+![adb](https://img.shields.io/badge/Android-ADB-3DDC84?logo=android&logoColor=white)
+![linux](https://img.shields.io/badge/Linux-Supported-FCC624?logo=linux&logoColor=black)
+![macos](https://img.shields.io/badge/macOS-Supported-000000?logo=apple&logoColor=white)
+![wsl](https://img.shields.io/badge/WSL-Compatible-0078D4?logo=windows&logoColor=white)
+![license](https://img.shields.io/badge/License-MIT-blue)
 
-Didesain berjalan mulus di:
+Tools wajib buat lo yang hobi gonta-ganti Custom ROM tapi males install ulang aplikasi satu-satu.  
+Script Bash sederhana namun powerful untuk **Backup & Restore aplikasi Android** (termasuk Split APK / App Bundles) via ADB — **massal, cepat, anti ribet.**
 
-🐧 Linux (Arch / Debian)
+---
 
-🍎 macOS (Intel & Apple Silicon)
+## 🌍 Kompatibilitas
+- 🐧 **Linux** (Arch / Debian)
+- 🍎 **macOS** (Intel & Apple Silicon)
+- 🪟 **Windows** via **WSL / Git Bash**
 
-🪟 Windows via WSL / Git Bash
+---
 
-🔥 Fitur Andalan
-📦 Split APK Support (Anti Force Close)
+## 🔥 Fitur Andalan
 
-Deteksi otomatis aplikasi modern (Instagram, Shopee, Gojek, dll.) yang pakai App Bundle.
+### 📦 Split APK Support (Anti Force Close)
+✔ Deteksi otomatis aplikasi App Bundle (Instagram, Shopee, Gojek, dll.)  
+✔ Backup semua pecahan (base, config, dll) ke folder khusus  
+✔ Restore pakai `adb install-multiple` → **jalan normal, tanpa FC**
 
-Backup semua pecahan APK (base, config, dll) ke folder khusus.
+---
 
-Restore pakai adb install-multiple — aplikasi jalan normal, tanpa FC.
+### ⚡ Incremental Backup (Smart Skip)
+⏱ Hemat waktu & kuota:
 
-⚡ Incremental Backup (Smart Skip)
+- Jika versi di HP **sama** → **SKIP**
+- Jika versi beda → otomatis backup versi terbaru
 
-Hemat waktu & kuota:
+---
 
-Jika versi di HP sama → SKIP (tidak download ulang)
+### 🖥️ Multi-Platform + WSL Bridge
+- Jalan native di **macOS & Linux**
+- **WSL Smart Detection** → otomatis pakai `adb.exe` milik Windows  
+  ➜ **tanpa ribet setup usbipd**
 
-Jika ada update → script otomatis backup versi terbaru.
+---
 
-🖥️ Multi-Platform + WSL Bridge
-
-Jalan native di macOS & Linux.
-
-WSL Smart Detection: kalau jalan di WSL, script otomatis pakai adb.exe dari Windows.
-➜ Tanpa ribet setup usbipd!
-
-🗂️ Centralized Repository
-
-Semua backup disimpan rapi di:
-
+## 🗂️ Lokasi Backup
+```bash
 ~/Documents/APK_REPOSITORY
-
-
 Format nama file:
 
+bash
+Salin kode
 NamaPackage_vVersi.apk
-
-🚀 Cara Install (Sat-set)
-🔹 Cara 1 — One-Liner (Paling Cepet)
-
-Tanpa clone repo — langsung jalan:
-
-Ganti URL_GIST_RAW kalau lo pakai script sendiri
-
+🚀 Cara Install
+🔹 Cara 1 — One-Liner (paling cepat)
+bash
+Salin kode
 bash <(curl -sL https://bit.ly/adb-manager-v4)
-
-🔹 Cara 2 — Manual (Buat yang mau oprek)
-
-Clone repo:
-
+🔹 Cara 2 — Manual
+bash
+Salin kode
 git clone https://github.com/username/adb-apk-manager.git
 cd adb-apk-manager
-
-
-Kasih izin eksekusi:
-
 chmod +x adb_manager.sh
-
-
-Jalankan:
-
 ./adb_manager.sh
-
-🛠️ Prasyarat (Requirements)
-🔸 Android Debug Bridge (ADB)
-
-macOS
-
+🛠️ Prasyarat
+ADB
+bash
+Salin kode
+# macOS
 brew install android-platform-tools
 
-
-Linux (Arch / CachyOS)
-
+# Arch / CachyOS
 sudo pacman -S android-tools
 
-
-Linux (Ubuntu / Debian)
-
+# Ubuntu / Debian
 sudo apt install adb
+Windows: install Platform Tools + masukkan ke PATH.
 
-
-Windows
-
-Install ADB & Platform Tools
-
-Pastikan sudah masuk ke PATH
-
-🔸 HP Android
-
+Android Device
 Developer Options ON
 
 USB Debugging ON
 
-Pakai kabel data bagus (biar nggak putus-putus)
+Kabel data yang bagus (biar transfer stabil)
 
 📸 Screenshots
-
-(Tempatkan screenshot terminal lo di sini)
+(tempatkan screenshot di sini)
 
 Menu Utama
 
-Proses Backup Split APK
+Backup Split APK
 
 ⚠️ Disclaimer
-
-Script ini hanya membackup file APK (installer).
-
-Data aplikasi (login, chat, save game, dll.) tidak ikut dibackup — karena batasan Android non-root.
-
-Gunakan dengan bijak — penulis tidak bertanggung jawab atas kehilangan data akibat misuse.
+Script hanya membackup APK (installer).
+Data aplikasi (login, chat, save game, dll.) tidak ikut ter-backup (non-root).
+Gunakan dengan bijak — risiko ditanggung pengguna.
 
 Made with ☕ by AwPetrik
