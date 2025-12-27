@@ -7,6 +7,10 @@
 ![wsl](https://img.shields.io/badge/WSL-Compatible-0078D4?logo=windows&logoColor=white)
 ![license](https://img.shields.io/badge/License-MIT-blue)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1ca6ff97-5b3e-450e-9d59-0fe0f5a937b2" alt="Screenshot ADB Manager">
+</p>
+
 ADB APK Manager cocok buat kamu yang sering gonta-ganti Custom ROM tapi nggak mau repot install ulang aplikasi satu per satu. Tool ini berupa script Bash yang sederhana namun cukup powerful untuk melakukan backup dan restore aplikasi Android. Termasuk yang berbasis Split APK / App Bundles lewat ADB secara batch, cepat, dan gak ribet.
 
 ---
